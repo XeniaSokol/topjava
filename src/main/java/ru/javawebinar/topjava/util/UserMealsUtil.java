@@ -1,6 +1,5 @@
 package ru.javawebinar.topjava.util;
 
-import ru.javawebinar.topjava.model.CaloriesUtil;
 import ru.javawebinar.topjava.model.UserMeal;
 import ru.javawebinar.topjava.model.UserMealWithExcess;
 
@@ -12,8 +11,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class UserMealsUtil {
-    private static CaloriesUtil caloriesUtil;
-
+   private static Map<LocalDate, Integer> caloriesPerDays;
     public static void main(String[] args) {
         List<UserMeal> meals = Arrays.asList(
                 new UserMeal(LocalDateTime.of(2020, Month.JANUARY, 30, 10, 0), "Завтрак", 500),
@@ -25,7 +23,7 @@ public class UserMealsUtil {
                 new UserMeal(LocalDateTime.of(2020, Month.JANUARY, 31, 20, 0), "Ужин", 410)
         );
 
-        caloriesUtil = new CaloriesUtil(meals);
+        caloriesPerDays = CaloriesUtil.getDaysAndCalories(meals);
 
         List<UserMealWithExcess> mealsTo = filteredByCycles(meals, LocalTime.of(7, 0), LocalTime.of(12, 0), 2000);
         mealsTo.forEach(System.out::println);
@@ -55,6 +53,6 @@ public class UserMealsUtil {
 
 
     private static boolean isExcess(LocalDate day, int caloriesPerDay) {
-        return caloriesUtil.getCaloriesPerDay(day) <= caloriesPerDay;
+        return caloriesPerDays.get(day) <= caloriesPerDay;
     }
 }
