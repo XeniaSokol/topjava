@@ -9,7 +9,6 @@ import java.util.Collection;
 import java.util.List;
 
 // TODO add userId
-@Repository
 public interface MealRepository {
 
     // null if updated meal does not belong to userId
