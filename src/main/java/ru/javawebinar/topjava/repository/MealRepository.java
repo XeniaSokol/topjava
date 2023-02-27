@@ -1,5 +1,6 @@
 package ru.javawebinar.topjava.repository;
 
+import org.springframework.stereotype.Repository;
 import ru.javawebinar.topjava.model.Meal;
 
 import java.time.LocalDate;
@@ -8,6 +9,7 @@ import java.util.Collection;
 import java.util.List;
 
 // TODO add userId
+@Repository
 public interface MealRepository {
 
     // null if updated meal does not belong to userId
