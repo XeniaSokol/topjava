@@ -1,5 +1,8 @@
 Java Enterprise Online Project 
 ===============================
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/df83fa7461ff49f48651a3767da82367)](https://app.codacy.com/gh/XeniaSokol/topjava?utm_source=github.com&utm_medium=referral&utm_content=XeniaSokol/topjava&utm_campaign=Badge_Grade_Settings)
+
 Разработка полнофункционального Spring/JPA Enterprise приложения c авторизацией и правами доступа на основе ролей с использованием наиболее популярных инструментов и технологий Java: Maven, Spring MVC, Security, JPA(Hibernate), REST(Jackson), Bootstrap (css,js), DataTables, jQuery + plugins, Java 8 Stream and Time API и хранением в базах данных Postgresql и HSQLDB.
 
 ![topjava_structure](https://javaops.ru/static/images/projects/top-scheme.jpg)
